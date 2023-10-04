@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #55575a, #232526);
+  color: white;
+}
+
+header,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+}
+
+form {
+  flex-wrap: wrap;
+}
+header {
+  font-size: 2rem;
+}
+
+.todo-input,
+.submit-btn {
+  padding: 0.5rem;
+  border: none;
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.submit-btn {
+  background-color: #676768;
+  color: rgb(0, 0, 0);
+  transition: all 0.2s;
+}
+.submit-btn:hover {
+  color: #676768;
+  background-color: rgb(0, 0, 0);
+}
+
+ul {
+  list-style: none;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 30%;
+}
+
+.todo-list {
+  min-width: 30%;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: #232526;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+
+  transition: all 0.5s ease;
+}
+
+.item {
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.delete-btn,
+.completed-btn {
+  padding: 1rem;
+  border: none;
+  background-color: #676768;
+  cursor: pointer;
+}
+
+.completed-btn {
+  background-color: #232526;
+  color: #ababac;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.fall {
+  transform: translateY(8rem) rotateZ(80deg);
+  opacity: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  color: #414345;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #060606;
+  color: #8c8c8c;
+
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+
+  .todo-input,
+  .submit-btn {
+    font-size: 1rem;
+  }
+
+  .select {
+    padding: 0.1rem;
+  }
+  select {
+    padding: 0.6rem;
+    overflow: hidden;
+  }
+  .select::after {
+    padding: 0;
+  }
+
+  .todo {
+    font-size: 1rem;
+  }
+
+  .item {
+    flex: 1;
+    padding: 0 0.5rem;
+  }
+  .todo-list {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 576px) {
+}
